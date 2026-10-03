@@ -18,7 +18,7 @@
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-5: 3rem;
-  --space-6: 4.5rem;
+  --space-6: 3.25rem;
   --space-7: 6.5rem;
   --radius-small: 0.75rem;
   --radius-card: 1.25rem;
@@ -217,10 +217,9 @@ button:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: min(44rem, calc(100svh - 4.75rem));
   overflow: hidden;
   align-items: center;
-  padding-block: var(--space-6);
+  padding-block: 3rem 2rem;
   background:
     radial-gradient(ellipse at 80% 43%, rgb(20 184 166 / 9%), transparent 36%),
     linear-gradient(112deg, var(--color-cream) 5%, #f7faf6 65%, #edf7f4 100%);
@@ -274,9 +273,9 @@ h3 {
 
 .hero h1 {
   margin-bottom: 0.65rem;
-  font-size: clamp(4rem, 17vw, 7.6rem);
+  font-size: clamp(2.25rem, 9vw, 4rem);
   font-weight: 800;
-  letter-spacing: -0.085em;
+  letter-spacing: -0.07em;
 }
 
 .hero-period,
@@ -350,7 +349,7 @@ h3 {
 }
 
 .hero-location {
-  margin: 1.8rem 0 0;
+  margin: 1.2rem 0 0;
   color: var(--color-muted);
   font-size: 0.8rem;
 }
@@ -363,7 +362,7 @@ h3 {
 .hero-art {
   position: relative;
   width: min(100%, 35rem);
-  min-height: 17rem;
+  min-height: 13rem;
   justify-self: center;
   isolation: isolate;
 }
@@ -666,46 +665,6 @@ h3 {
   margin-bottom: 0;
 }
 
-.quote-card {
-  position: relative;
-  padding: 2rem;
-  border: 1px solid rgb(15 118 110 / 9%);
-  border-radius: var(--radius-card);
-  background: linear-gradient(145deg, #f0f7f3, #e7f1ed);
-}
-
-.quote-mark {
-  display: block;
-  height: 2.3rem;
-  color: var(--color-accent);
-  font-family: Georgia, serif;
-  font-size: 4rem;
-  line-height: 1;
-}
-
-.quote-card blockquote {
-  margin: 0 0 1.2rem;
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.55;
-}
-
-.quote-rule {
-  display: block;
-  width: 2.6rem;
-  height: 2px;
-  margin-bottom: 0.65rem;
-  background: var(--color-accent-bright);
-}
-
-.quote-card p {
-  margin: 0;
-  color: var(--color-muted);
-  font-size: 0.8rem;
-}
-
 .card-grid {
   display: grid;
   gap: 1rem;
@@ -904,44 +863,12 @@ h3 {
   font-weight: 700;
 }
 
-.project-aside {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-card);
-  background: var(--color-paper);
-}
-
-.aside-number {
-  color: var(--color-accent);
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.aside-number span {
-  color: #91a29b;
-}
-
-.project-aside p {
-  max-width: 12rem;
-  margin: 0;
-  color: var(--color-muted);
-  font-size: 0.8rem;
-}
-
-.aside-arrow {
-  color: var(--color-accent);
-  font-size: 1.4rem;
-}
-
 .three-columns {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .skill-card {
+  padding: 1rem;
   background: var(--color-cream);
 }
 
@@ -949,7 +876,7 @@ h3 {
   display: grid;
   width: 2.6rem;
   height: 2.6rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.7rem;
   place-items: center;
   border-radius: 50%;
   background: #dcece4;
@@ -958,8 +885,7 @@ h3 {
   font-weight: 700;
 }
 
-.skill-card ul,
-.experience-card ul {
+.skill-card ul {
   margin: 0;
   padding-left: 1.15rem;
 }
@@ -996,7 +922,7 @@ h3 {
 .experience-card {
   display: grid;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-card);
   background: var(--color-paper);
@@ -1019,7 +945,7 @@ h3 {
 }
 
 .experience-place {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--color-muted);
   font-size: 0.82rem;
 }
@@ -1044,7 +970,8 @@ h3 {
 
 .language-list {
   display: grid;
-  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 0.8rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1055,7 +982,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-bottom: 0.65rem;
+  padding-block: 0.35rem;
   border-bottom: 1px solid var(--color-line);
   font-size: 0.9rem;
   font-weight: 700;
@@ -1068,7 +995,7 @@ h3 {
 }
 
 .qualities {
-  padding: 1.25rem;
+  padding: 0.8rem;
   border-left: 2px solid var(--color-accent-bright);
   background: var(--color-cream);
 }
@@ -1084,7 +1011,7 @@ h3 {
 }
 
 .contact-section {
-  padding-block: var(--space-6);
+  padding-block: 3rem;
   background: var(--color-accent);
   color: var(--color-white);
 }
@@ -1179,7 +1106,7 @@ h3 {
   }
 
   .hero-art {
-    min-height: 22rem;
+    min-height: 16rem;
   }
 
   .laptop-screen {
@@ -1193,8 +1120,8 @@ h3 {
 
 @media (min-width: 760px) {
   :root {
-    --space-6: 5.5rem;
-    --space-7: 7.5rem;
+    --space-6: 4rem;
+    --space-7: 5rem;
   }
 
   .container {
@@ -1206,7 +1133,7 @@ h3 {
   }
 
   .hero {
-    min-height: 39rem;
+    padding-block: 3rem;
   }
 
   .hero-grid {
@@ -1215,12 +1142,12 @@ h3 {
   }
 
   .hero h1 {
-    font-size: clamp(5rem, 10vw, 7.6rem);
+    font-size: clamp(3.5rem, 6vw, 4.5rem);
   }
 
   .hero-art {
     width: 100%;
-    min-height: 22rem;
+    min-height: 18rem;
   }
 
   .about-grid {
@@ -1240,14 +1167,6 @@ h3 {
   .project-copy {
     align-self: center;
     padding: 2rem;
-  }
-
-  .project-aside {
-    align-self: stretch;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 1.5rem;
   }
 
   .experience-grid {
@@ -1334,10 +1253,6 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  :root {
-    --space-6: 6.5rem;
-  }
-
   .hero-grid {
     gap: 2.5rem;
   }
@@ -1353,24 +1268,16 @@ h3 {
   .three-columns {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
-  .project-aside {
-    padding: 2rem;
-  }
 }
 
 @media (min-width: 1440px) {
-  .hero {
-    min-height: 44rem;
-  }
-
   .hero-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .hero-art {
     width: 35rem;
-    min-height: 29rem;
+    min-height: 20rem;
   }
 }
 
